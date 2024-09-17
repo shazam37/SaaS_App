@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>{% block head_title %}SaaS_App{% endblock head_title %}</title>
+        {% include 'base/css.html' %}
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="">
@@ -11,10 +12,12 @@
     <body>
     
         <h1>{{page_title}}</h1>
-
+        
+        {% include 'nav/navbar.html' %}
         {% block content %}
 
         {% endblock content %}
         
+        {% include 'base/css.html' %}
     </body>
 </html>
